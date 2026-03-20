@@ -573,3 +573,36 @@ main {
   .welcome-bar { flex-direction: column; align-items: flex-start; }
   .site-header__inner { height: 52px; }
 }
+/* ── Category Nav ───────────────────────────────────────── */
+.category-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.category-nav a {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 14px 28px;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.category-nav a:hover {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.category-nav a.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* separatori verticali sottili */
+.category-nav a + a {
+  border-left: 1px solid var(--border);
+}

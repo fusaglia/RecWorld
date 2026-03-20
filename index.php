@@ -3,28 +3,52 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecWorld</title>
     <link rel="stylesheet" href="model/style.css">
 </head>
 <body>
 
-<h1>Benvenuto su RecWorld</h1>
+<!-- HEADER: titolo a sinistra, login a destra -->
+<header class="site-header">
+    <div class="site-header__inner">
+        <a href="index.php" class="site-logo">Rec<span>World</span></a>
 
-<?php if(isset($_SESSION["user_id"])): ?>       <!-- se trova l'utente loggato, mostra il suo nome e i pulsanti di logout e aggiunta consiglio -->
-    
-    <p>Ciao <?php echo $_SESSION["username"]; ?> 👋</p>
-    <a href="view/logout.php"><button>Logout</button></a>
-    <a href="view/add_recommendation.php"><button>Aggiungi consiglio</button></a>
+        <div>
+            <?php if(isset($_SESSION["user_id"])): ?>
+                <span class="text-muted" style="margin-right: 12px;">Ciao, <strong><?php echo htmlspecialchars($_SESSION["username"]); ?></strong> 👋</span>
+                <a href="view/logout.php" class="btn btn-ghost">Logout</a>
+            <?php else: ?>
+                <a href="view/login.php" class="btn btn-ghost">Login / Registrati</a>
+            <?php endif; ?>
+        </div>
+    </div>
+</header>
 
-<?php else: ?>      <!-- altrimenti mostra il pulsante di login/registrazione -->
+<!-- NAVBAR CATEGORIE -->
+<nav class="category-nav">
+    <a href="index.php">Home</a>
+    <a href="view/anime.php">Anime</a>
+    <a href="view/manga.php">Manga</a>
+    <a href="view/videogiochi.php">Videogiochi</a>
+    <a href="view/canzoni.php">Canzoni</a>
 
-    <a href="view/login.php"><button>Login / Registrati</button></a>
-    
-<?php endif; ?>
 
-<!-- Qui puoi mostrare i consigli pubblici a tutti -->
+</nav>
+
+<!-- CONTENUTO PRINCIPALE -->
+<main>
+    <div class="card-grid">
+        <!-- I consigli verranno mostrati qui -->
+    </div>
+</main>
+
+<footer>
+    RecWorld © <?php echo date('Y'); ?> — fatti consigliare
+</footer>
+
 </body>
 </html>

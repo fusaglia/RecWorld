@@ -586,7 +586,7 @@ main {
   color: var(--text-muted);
   font-size: 0.88rem;
   font-weight: 500;
-  padding: 14px 28px;
+  padding: 14px 36px;
   border-bottom: 2px solid transparent;
   transition: all var(--transition);
   text-decoration: none;
@@ -605,4 +605,11 @@ main {
 /* separatori verticali sottili */
 .category-nav a + a {
   border-left: 1px solid var(--border);
+}
+
+/* sovrascrive la regola generica nav */
+nav.category-nav {
+  justify-content: flex-start;
+  gap: 0;
+  padding: 0;
 }

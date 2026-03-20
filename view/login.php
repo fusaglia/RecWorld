@@ -50,3 +50,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="../model/style.css">
+</head>
+<body>
+
+<h2>Login / Registrazione</h2>
+
+<form method="POST">
+    Username: <input type="text" name="username"><br><br>
+    Mail: <input type="email" name="mail" required><br><br>
+    Password: <input type="password" name="password" required><br><br>
+    
+    <button type="submit">Accedi / Registrati</button>
+</form>
+
+</body>
+</html>

@@ -7,6 +7,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>RecWorld</title>
+    <link rel="stylesheet" href="model/style.css">
 </head>
 <body>
 

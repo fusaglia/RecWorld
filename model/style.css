@@ -85,8 +85,7 @@ header, .site-header {
 }
 
 .site-header__inner {
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -583,10 +582,12 @@ main {
 }
 
 .category-nav a {
+  flex: 1;
+  text-align: center;
   color: var(--text-muted);
   font-size: 0.88rem;
   font-weight: 500;
-  padding: 14px 36px;
+  padding: 14px 0;
   border-bottom: 2px solid transparent;
   transition: all var(--transition);
   text-decoration: none;
